@@ -1,0 +1,112 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmdm7l2eqinjm"]
+
+[ext_resource type="Script" path="res://Scripts/sonido.gd" id="1_lkvrm"]
+[ext_resource type="Texture2D" uid="uid://l7tguukfwluo" path="res://Imagenes de elementos/ondas.png" id="2_7gw2t"]
+[ext_resource type="Texture2D" uid="uid://618vhweghf5p" path="res://Imagenes de elementos/stop.png" id="3_hs1sd"]
+[ext_resource type="Texture2D" uid="uid://cjffko2wcpb8o" path="res://Imagenes de elementos/boton play.png" id="4_0a0lo"]
+[ext_resource type="Texture2D" uid="uid://c3666di40fl3j" path="res://Imagenes de elementos/salir.png" id="5_tixru"]
+
+[node name="Sonido" type="Node2D"]
+script = ExtResource("1_lkvrm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 1143.0
+offset_bottom = 638.0
+color = Color(0.192157, 0.192157, 0.192157, 1)
+
+[node name="a hero" type="TextureButton" parent="."]
+offset_left = 307.0
+offset_top = 411.0
+offset_right = 935.0
+offset_bottom = 451.0
+
+[node name="Label" type="Label" parent="a hero"]
+layout_mode = 0
+offset_right = 628.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 27
+text = "Kim Lightyear - Legends Lightyeartraxx/Pixabay"
+
+[node name="8 bits" type="TextureButton" parent="."]
+offset_left = 354.0
+offset_top = 198.0
+offset_right = 914.0
+offset_bottom = 238.0
+
+[node name="Label" type="Label" parent="8 bits"]
+layout_mode = 0
+offset_right = 521.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 27
+text = "8 Bits dream land - moodmode/Pixabay"
+
+[node name="tapped" type="TextureButton" parent="."]
+offset_left = 99.0
+offset_top = 273.0
+offset_right = 1101.0
+offset_bottom = 364.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label2" type="Label" parent="tapped"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = -38.0
+offset_right = 970.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 29
+text = "
+Trapped in the Box - quarantine dance instrumental confinement
+                              		    melodyayresgriffiths/Pixabay"
+
+[node name="Ondas" type="Sprite2D" parent="."]
+position = Vector2(307, 219)
+scale = Vector2(0.285963, 0.553621)
+texture = ExtResource("2_7gw2t")
+
+[node name="Ondas2" type="Sprite2D" parent="."]
+position = Vector2(116, 297)
+scale = Vector2(0.285963, 0.553621)
+texture = ExtResource("2_7gw2t")
+
+[node name="Ondas3" type="Sprite2D" parent="."]
+position = Vector2(259, 429)
+scale = Vector2(0.285963, 0.553621)
+texture = ExtResource("2_7gw2t")
+
+[node name="Mudo" type="TextureButton" parent="."]
+offset_left = 894.0
+offset_top = 509.0
+offset_right = 988.0
+offset_bottom = 600.0
+texture_normal = ExtResource("3_hs1sd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Play" type="TextureButton" parent="."]
+offset_left = 1021.0
+offset_top = 509.0
+offset_right = 1110.0
+offset_bottom = 600.0
+texture_normal = ExtResource("4_0a0lo")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="salir" type="TextureButton" parent="."]
+offset_left = 45.0
+offset_top = 528.0
+offset_right = 124.0
+offset_bottom = 616.0
+texture_normal = ExtResource("5_tixru")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="a hero" to="." method="_on_a_hero_pressed"]
+[connection signal="pressed" from="8 bits" to="." method="_on_8_bits_pressed"]
+[connection signal="pressed" from="tapped" to="." method="_on_tapped_pressed"]
+[connection signal="pressed" from="Mudo" to="." method="_on_mudo_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]

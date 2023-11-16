@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwmdm8epljryv"]
+
+[ext_resource type="Texture2D" uid="uid://dm5n4hxp3508" path="res://Imagenes de elementos/Salon de matematicas.png" id="1_473if"]
+
+[node name="Salon de matematicas" type="Node2D"]
+
+[node name="SalonDeMatematicas" type="Sprite2D" parent="."]
+position = Vector2(611, 323.5)
+scale = Vector2(1.19336, 0.631836)
+texture = ExtResource("1_473if")

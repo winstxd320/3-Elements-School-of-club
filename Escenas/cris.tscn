@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://55g1r5khpae6"]
+
+[ext_resource type="Texture2D" uid="uid://btgs4ohx3rnij" path="res://Personajes/Cris.png" id="1_lt0f1"]
+
+[node name="Cris" type="Node2D"]
+
+[node name="Cris" type="Sprite2D" parent="."]
+position = Vector2(-11.5, -17.3125)
+scale = Vector2(0.333008, 0.341186)
+texture = ExtResource("1_lt0f1")

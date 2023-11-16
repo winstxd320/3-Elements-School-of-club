@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cba6u05tts1mu"]
+
+[ext_resource type="Texture2D" uid="uid://dxhkpkr5w177c" path="res://Imagenes de elementos/Patio tracero de tarde.png" id="1_q1bji"]
+
+[node name="patio tracero de tarde" type="Node2D"]
+
+[node name="PatioTraceroDeTarde" type="Sprite2D" parent="."]
+position = Vector2(608, 324.5)
+scale = Vector2(1.18359, 0.633789)
+texture = ExtResource("1_q1bji")

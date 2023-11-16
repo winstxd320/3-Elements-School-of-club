@@ -1,0 +1,490 @@
+[gd_scene load_steps=15 format=3 uid="uid://tl8dleeyiapx"]
+
+[ext_resource type="Script" path="res://Scripts/m.gd" id="1_xrmyf"]
+[ext_resource type="Texture2D" uid="uid://eeqwsw2f6bqd" path="res://Imagenes de elementos/Pantalla score.png" id="2_7fakf"]
+[ext_resource type="Texture2D" uid="uid://c2h2dw4fococn" path="res://Imagenes de elementos/papel.png" id="3_si5ri"]
+[ext_resource type="Texture2D" uid="uid://cjdpkr1i5opsw" path="res://Imagenes de elementos/piedra.png" id="4_4h1q0"]
+[ext_resource type="Texture2D" uid="uid://d1376loo3soct" path="res://Imagenes de elementos/tijera.png" id="5_5oufw"]
+[ext_resource type="Texture2D" uid="uid://cka0o5es1clxg" path="res://Imagenes de elementos/boton reiniciar.png" id="6_x7dtc"]
+[ext_resource type="Texture2D" uid="uid://cn0yeqih3qndf" path="res://cuadro colores/piedra.png" id="7_pika7"]
+[ext_resource type="Texture2D" uid="uid://d4hlgkec0flya" path="res://cuadro colores/tijera.png" id="8_18n8e"]
+[ext_resource type="Texture2D" uid="uid://du8lbm1ge0arh" path="res://cuadro colores/papel.png" id="9_3v5yi"]
+[ext_resource type="Texture2D" uid="uid://b0c1os8itl2of" path="res://Imagenes de elementos/Jugador1.png" id="10_1lglc"]
+[ext_resource type="Texture2D" uid="uid://dv4bld1ub8ayw" path="res://Imagenes de elementos/Jugador2.png" id="11_pguia"]
+[ext_resource type="Texture2D" uid="uid://dcrsvegwji0fl" path="res://Imagenes de elementos/boton listo.png" id="12_bevtc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hrhon"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_twc3p"]
+
+[node name="Multijugador" type="Node2D"]
+script = ExtResource("1_xrmyf")
+
+[node name="Monitor" type="Sprite2D" parent="."]
+position = Vector2(569, 216)
+scale = Vector2(0.733333, 0.646288)
+texture = ExtResource("2_7fakf")
+
+[node name="Fondo marcador" type="ColorRect" parent="."]
+visible = false
+offset_left = 356.0
+offset_top = 75.0
+offset_right = 782.0
+offset_bottom = 255.0
+
+[node name="Linea negra" type="ColorRect" parent="."]
+offset_left = 560.0
+offset_top = -35.0
+offset_right = 575.0
+offset_bottom = 664.0
+color = Color(0, 0, 0, 1)
+
+[node name="Puntos cpu" type="Label" parent="."]
+offset_left = 650.0
+offset_top = 90.0
+offset_right = 690.0
+offset_bottom = 183.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "0	"
+
+[node name="Puntos jugador" type="Label" parent="."]
+offset_left = 433.0
+offset_top = 95.0
+offset_right = 473.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Papel2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(916, 246)
+scale = Vector2(0.0449883, 0.0401736)
+texture = ExtResource("3_si5ri")
+
+[node name="Papel3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(217, 241)
+scale = Vector2(0.0449883, 0.0401736)
+texture = ExtResource("3_si5ri")
+
+[node name="Piedra2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(916, 250)
+scale = Vector2(0.0935, 0.091)
+texture = ExtResource("4_4h1q0")
+
+[node name="Piedra3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 247)
+scale = Vector2(0.0935, 0.091)
+texture = ExtResource("4_4h1q0")
+
+[node name="Tijera2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(916, 238)
+scale = Vector2(0.207042, 0.228058)
+texture = ExtResource("5_5oufw")
+
+[node name="Tijera3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(235, 240)
+scale = Vector2(0.207042, 0.228058)
+texture = ExtResource("5_5oufw")
+
+[node name="Boton Reinicio" type="TextureButton" parent="."]
+offset_left = 494.0
+offset_top = 467.0
+offset_right = 646.0
+offset_bottom = 622.0
+texture_normal = ExtResource("6_x7dtc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Ganastes" type="Label" parent="."]
+visible = false
+offset_left = 366.0
+offset_top = 183.0
+offset_right = 568.0
+offset_bottom = 250.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 14
+theme_override_font_sizes/font_size = 40
+text = "Ganastes"
+
+[node name="Gano" type="Label" parent="."]
+visible = false
+offset_left = 619.0
+offset_top = 183.0
+offset_right = 824.0
+offset_bottom = 250.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 16
+theme_override_font_sizes/font_size = 40
+text = "Ganó"
+
+[node name="Empate2" type="Label" parent="."]
+visible = false
+offset_left = 378.0
+offset_top = 169.0
+offset_right = 583.0
+offset_bottom = 236.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 16
+theme_override_font_sizes/font_size = 45
+text = "Empate"
+
+[node name="Empate" type="Label" parent="."]
+visible = false
+offset_left = 594.0
+offset_top = 169.0
+offset_right = 799.0
+offset_bottom = 236.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 16
+theme_override_font_sizes/font_size = 45
+text = "Empate"
+
+[node name="Contenedor Objetos" type="ColorRect" parent="."]
+visible = false
+offset_left = -16.0
+offset_top = 197.0
+offset_right = 459.0
+offset_bottom = 319.0
+color = Color(0, 0.509804, 1, 1)
+
+[node name="Cerrar" type="TextureButton" parent="Contenedor Objetos"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 39.0
+offset_right = 460.0
+offset_bottom = 75.0
+texture_normal = ExtResource("7_pika7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="x" type="Label" parent="Contenedor Objetos/Cerrar"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -1.0
+offset_right = 53.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "X"
+
+[node name="Piedra" type="TextureButton" parent="Contenedor Objetos"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 126.0
+offset_bottom = 98.0
+texture_normal = ExtResource("4_4h1q0")
+texture_hover = ExtResource("7_pika7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Papel" type="TextureButton" parent="Contenedor Objetos"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 18.0
+offset_right = 232.0
+offset_bottom = 84.0
+texture_normal = ExtResource("3_si5ri")
+texture_hover = ExtResource("8_18n8e")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Tijera" type="TextureButton" parent="Contenedor Objetos"]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 14.0
+offset_right = 367.0
+offset_bottom = 98.0
+texture_normal = ExtResource("5_5oufw")
+texture_hover = ExtResource("9_3v5yi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Activar objetos" type="TextureButton" parent="."]
+offset_top = 214.0
+offset_right = 55.0
+offset_bottom = 288.0
+texture_normal = ExtResource("9_3v5yi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name=">" type="Label" parent="Activar objetos"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 4.0
+offset_right = 52.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = -2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = ">"
+
+[node name="Ganador animacion" type="CharacterBody2D" parent="."]
+
+[node name="HasGanado" type="Sprite2D" parent="Ganador animacion"]
+position = Vector2(-280, 255)
+texture = ExtResource("10_1lglc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ganador animacion"]
+position = Vector2(-16, 0)
+shape = SubResource("CapsuleShape2D_hrhon")
+disabled = true
+
+[node name="Perdedor animacion" type="CharacterBody2D" parent="."]
+
+[node name="HasPerdido" type="Sprite2D" parent="Perdedor animacion"]
+position = Vector2(-272, 256)
+texture = ExtResource("11_pguia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perdedor animacion"]
+shape = SubResource("CapsuleShape2D_twc3p")
+disabled = true
+
+[node name="Contenido Objetos 2" type="ColorRect" parent="."]
+visible = false
+offset_left = 690.0
+offset_top = 197.0
+offset_right = 1163.0
+offset_bottom = 326.0
+color = Color(0, 1, 0, 1)
+
+[node name="Cerrar 2" type="TextureButton" parent="Contenido Objetos 2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 39.0
+offset_right = 56.0
+offset_bottom = 79.0
+texture_normal = ExtResource("7_pika7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="x2" type="Label" parent="Contenido Objetos 2/Cerrar 2"]
+layout_mode = 0
+offset_left = 11.0
+offset_right = 53.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "X"
+
+[node name="Piedra1" type="TextureButton" parent="Contenido Objetos 2"]
+layout_mode = 0
+offset_left = 71.0
+offset_right = 180.0
+offset_bottom = 125.0
+texture_normal = ExtResource("4_4h1q0")
+texture_hover = ExtResource("7_pika7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Papel1" type="TextureButton" parent="Contenido Objetos 2"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 21.0
+offset_right = 280.0
+offset_bottom = 96.0
+texture_normal = ExtResource("3_si5ri")
+texture_hover = ExtResource("9_3v5yi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Tijera1" type="TextureButton" parent="Contenido Objetos 2"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 21.0
+offset_right = 399.0
+offset_bottom = 98.0
+texture_normal = ExtResource("5_5oufw")
+texture_hover = ExtResource("7_pika7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Activar objetos 2" type="TextureButton" parent="."]
+offset_left = 1105.0
+offset_top = 218.0
+offset_right = 1162.0
+offset_bottom = 290.0
+texture_normal = ExtResource("8_18n8e")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name=">2" type="Label" parent="Activar objetos 2"]
+layout_mode = 0
+offset_left = 11.0
+offset_right = 51.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = -2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = "<"
+
+[node name="Listo" type="TextureButton" parent="."]
+offset_left = 494.0
+offset_top = 467.0
+offset_right = 646.0
+offset_bottom = 622.0
+texture_normal = ExtResource("12_bevtc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="L" type="Label" parent="."]
+visible = false
+offset_left = 162.0
+offset_top = 211.0
+offset_right = 305.0
+offset_bottom = 300.0
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0, 0.211765, 0.647059, 1)
+theme_override_colors/font_shadow_color = Color(0.537255, 0.8, 0.552941, 1)
+theme_override_colors/font_outline_color = Color(0, 0.905882, 0.290196, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = -3
+theme_override_font_sizes/font_size = 62
+text = "Listo"
+
+[node name="l2" type="Label" parent="."]
+visible = false
+offset_left = 870.0
+offset_top = 211.0
+offset_right = 1013.0
+offset_bottom = 300.0
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0, 0.211765, 0.647059, 1)
+theme_override_colors/font_shadow_color = Color(0.537255, 0.8, 0.552941, 1)
+theme_override_colors/font_outline_color = Color(0, 0.905882, 0.290196, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = -3
+theme_override_font_sizes/font_size = 62
+text = "Listo"
+
+[node name="boton menu" type="TextureButton" parent="."]
+visible = false
+offset_left = 494.0
+offset_top = 433.0
+offset_right = 656.0
+offset_bottom = 593.0
+texture_normal = ExtResource("6_x7dtc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = 349.0
+offset_top = 159.0
+offset_right = 813.0
+offset_bottom = 354.0
+color = Color(0.247059, 1, 1, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 91.0
+offset_right = 408.0
+offset_bottom = 143.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.564706, 0.866667, 0, 1)
+theme_override_colors/font_outline_color = Color(0.945098, 0.737255, 0, 1)
+text = "UNO DE LOS DOS JUGADORES NO ESCOGIO UNO 
+DE LOS TRES ELEMENTOS. ELIGA UNA OPCIÓN."
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = -4.0
+offset_right = 509.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0.6, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.564706, 0.866667, 0, 1)
+theme_override_colors/font_outline_color = Color(0.945098, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "ALERTA	"
+
+[node name="TextureButton" type="TextureButton" parent="ColorRect"]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 9.0
+offset_right = 442.0
+offset_bottom = 37.0
+texture_normal = ExtResource("7_pika7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label3" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.043
+anchor_bottom = 0.045
+offset_left = 421.0
+offset_top = 10.0
+offset_right = 441.048
+offset_bottom = 27.225
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "X	"
+
+[node name="Jugador 1" type="Label" parent="."]
+offset_left = 398.0
+offset_top = 68.0
+offset_right = 628.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Jugador 1"
+
+[node name="Jugador 2" type="Label" parent="."]
+offset_left = 611.0
+offset_top = 68.0
+offset_right = 841.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Jugador 2"
+
+[connection signal="pressed" from="Boton Reinicio" to="." method="_on_boton_reinicio_pressed"]
+[connection signal="pressed" from="Contenedor Objetos/Cerrar" to="." method="_on_cerrar_pressed"]
+[connection signal="pressed" from="Contenedor Objetos/Piedra" to="." method="_on_piedra_pressed"]
+[connection signal="pressed" from="Contenedor Objetos/Papel" to="." method="_on_papel_pressed"]
+[connection signal="pressed" from="Contenedor Objetos/Tijera" to="." method="_on_tijera_pressed"]
+[connection signal="pressed" from="Activar objetos" to="." method="_on_activar_objetos_pressed"]
+[connection signal="pressed" from="Contenido Objetos 2/Cerrar 2" to="." method="_on_cerrar_2_pressed"]
+[connection signal="pressed" from="Contenido Objetos 2/Piedra1" to="." method="_on_piedra_1_pressed"]
+[connection signal="pressed" from="Contenido Objetos 2/Papel1" to="." method="_on_papel_1_pressed"]
+[connection signal="pressed" from="Contenido Objetos 2/Tijera1" to="." method="_on_tijera_1_pressed"]
+[connection signal="pressed" from="Activar objetos 2" to="." method="_on_activar_objetos_2_pressed"]
+[connection signal="pressed" from="Listo" to="." method="_on_listo_pressed"]
+[connection signal="pressed" from="boton menu" to="." method="_on_boton_menu_pressed"]
+[connection signal="pressed" from="ColorRect/TextureButton" to="." method="_on_texture_button_pressed"]

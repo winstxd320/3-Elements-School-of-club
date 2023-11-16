@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="3 Elements "
+run/main_scene="res://Escenas/menu.tscn"
+config/features=PackedStringArray("4.0", "Forward Plus")
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/image="res://Imagenes de elementos/foto.png"
+config/icon="res://Imagenes de elementos/ico.png"
+
+[autoload]
+
+Global="*res://Scripts/global.gd"
+
+[display]
+
+window/stretch/mode="viewport"

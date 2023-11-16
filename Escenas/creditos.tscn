@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqabveepurejv"]
+
+[ext_resource type="Script" path="res://Scripts/creditos.gd" id="1_4ut46"]
+[ext_resource type="Texture2D" uid="uid://cg4anam61hvm1" path="res://Imagenes de elementos/creditos.png" id="1_33vrm"]
+[ext_resource type="Texture2D" uid="uid://c3666di40fl3j" path="res://Imagenes de elementos/salir.png" id="2_3xvuf"]
+
+[node name="Creditos" type="Node2D"]
+script = ExtResource("1_4ut46")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 3.0
+offset_right = 1136.0
+offset_bottom = 631.0
+color = Color(0.211765, 0.207843, 0.211765, 1)
+
+[node name="menu" type="TextureButton" parent="."]
+offset_left = 1032.0
+offset_top = 534.0
+offset_right = 1071.0
+offset_bottom = 574.0
+scale = Vector2(2.07296, 2.00063)
+texture_normal = ExtResource("2_3xvuf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Creditos" type="Sprite2D" parent="."]
+position = Vector2(555, 406.073)
+scale = Vector2(0.920182, 1.02545)
+texture = ExtResource("1_33vrm")
+
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

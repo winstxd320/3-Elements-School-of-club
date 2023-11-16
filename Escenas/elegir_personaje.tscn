@@ -1,0 +1,171 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvmkl0ghvn3f2"]
+
+[ext_resource type="Script" path="res://Scripts/Elegir personaje.gd" id="1_irko0"]
+[ext_resource type="Texture2D" uid="uid://cwoy4ea4vyswy" path="res://Personajes/Max.png" id="2_j8qx0"]
+[ext_resource type="Texture2D" uid="uid://vi8hubes6r5j" path="res://Imagenes de elementos/hover.png" id="3_l0mac"]
+[ext_resource type="Texture2D" uid="uid://cwmondd2ni6j4" path="res://Personajes/ELI (2).png" id="4_lgws1"]
+[ext_resource type="Texture2D" uid="uid://cdax8eovuvyn3" path="res://Personajes/J.png" id="4_wf78d"]
+[ext_resource type="Texture2D" uid="uid://c8mkkmx0mont7" path="res://Personajes/Phember.png" id="5_4h1lj"]
+[ext_resource type="Texture2D" uid="uid://dtyp0l81yykjd" path="res://Personajes/Valentino.png" id="7_3m5id"]
+[ext_resource type="Texture2D" uid="uid://btgs4ohx3rnij" path="res://Personajes/Cris.png" id="7_8m6q8"]
+
+[node name="Elegir personaje" type="Node2D"]
+script = ExtResource("1_irko0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 1147.0
+offset_bottom = 644.0
+color = Color(0.211765, 0.207843, 0.211765, 1)
+
+[node name="Juan" type="TextureButton" parent="."]
+offset_left = 123.0
+offset_top = 63.0
+offset_right = 349.0
+offset_bottom = 267.0
+texture_normal = ExtResource("2_j8qx0")
+texture_focused = ExtResource("3_l0mac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Eli" type="TextureButton" parent="."]
+offset_left = 473.0
+offset_top = 52.0
+offset_right = 723.0
+offset_bottom = 271.0
+texture_normal = ExtResource("4_lgws1")
+texture_focused = ExtResource("3_l0mac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="J" type="TextureButton" parent="."]
+offset_left = 851.0
+offset_top = 55.0
+offset_right = 1095.0
+offset_bottom = 269.0
+texture_normal = ExtResource("4_wf78d")
+texture_focused = ExtResource("3_l0mac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Phember" type="TextureButton" parent="."]
+offset_left = 132.0
+offset_top = 332.0
+offset_right = 367.0
+offset_bottom = 583.0
+texture_normal = ExtResource("5_4h1lj")
+texture_focused = ExtResource("3_l0mac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Samantha" type="TextureButton" parent="."]
+offset_left = 475.0
+offset_top = 348.0
+offset_right = 704.0
+offset_bottom = 589.0
+texture_normal = ExtResource("7_3m5id")
+texture_focused = ExtResource("3_l0mac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Cris" type="TextureButton" parent="."]
+offset_left = 807.0
+offset_top = 332.0
+offset_right = 1110.0
+offset_bottom = 596.0
+texture_normal = ExtResource("7_8m6q8")
+texture_focused = ExtResource("3_l0mac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Titulo" type="Label" parent="."]
+offset_left = 416.0
+offset_top = 4.0
+offset_right = 789.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Selecciona un personaje"
+
+[node name="Max" type="Label" parent="."]
+offset_left = 199.0
+offset_top = 273.0
+offset_right = 572.0
+offset_bottom = 321.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Max"
+
+[node name="Eli2" type="Label" parent="."]
+offset_left = 572.0
+offset_top = 279.0
+offset_right = 945.0
+offset_bottom = 327.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Eli	"
+
+[node name="J2" type="Label" parent="."]
+offset_left = 962.0
+offset_top = 277.0
+offset_right = 1335.0
+offset_bottom = 325.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "J"
+
+[node name="Phember2" type="Label" parent="."]
+offset_left = 161.0
+offset_top = 596.0
+offset_right = 534.0
+offset_bottom = 644.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Phember"
+
+[node name="Samantha2" type="Label" parent="."]
+offset_left = 515.0
+offset_top = 600.0
+offset_right = 888.0
+offset_bottom = 648.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Valentino"
+
+[node name="Cris2" type="Label" parent="."]
+offset_left = 935.0
+offset_top = 605.0
+offset_right = 1308.0
+offset_bottom = 653.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Cris"
+
+[connection signal="pressed" from="Juan" to="." method="_on_juan_pressed"]
+[connection signal="pressed" from="Eli" to="." method="_on_eli_pressed"]
+[connection signal="pressed" from="J" to="." method="_on_j_pressed"]
+[connection signal="pressed" from="Phember" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Samantha" to="." method="_on_samantha_pressed"]
+[connection signal="pressed" from="Cris" to="." method="_on_cris_pressed"]

@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqpnhu0hs4two"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_7p0aj"]
+[ext_resource type="Texture2D" uid="uid://cqvlpvpbfdtee" path="res://Imagenes de elementos/logo juego.png" id="1_poq64"]
+[ext_resource type="Texture2D" uid="uid://cik2jsvkmo0ar" path="res://Imagenes de elementos/Jugar contra cpu.png" id="3_lckh5"]
+[ext_resource type="Texture2D" uid="uid://c0i0fikbfjkgn" path="res://Imagenes de elementos/Sonido.png" id="5_88q2k"]
+[ext_resource type="Texture2D" uid="uid://cehoueu52ya8m" path="res://Imagenes de elementos/2jugadores.png" id="6_eff21"]
+[ext_resource type="Texture2D" uid="uid://c3l43ribk0snm" path="res://Imagenes de elementos/Sin título-1.png" id="6_y270m"]
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_8cr0o"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_7p0aj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 657.0
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="CharacterBody2D" parent="."]
+
+[node name="LogoJuego" type="Sprite2D" parent="Logo"]
+position = Vector2(-617, 172.5)
+scale = Vector2(0.994531, 0.848611)
+texture = ExtResource("1_poq64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Logo"]
+shape = SubResource("SeparationRayShape2D_8cr0o")
+
+[node name="Jugar" type="TextureButton" parent="."]
+visible = false
+offset_left = 404.0
+offset_top = 269.0
+offset_right = 786.0
+offset_bottom = 359.0
+size_flags_horizontal = 2
+size_flags_stretch_ratio = 7.09
+texture_normal = ExtResource("3_lckh5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sonido" type="TextureButton" parent="."]
+visible = false
+offset_left = 429.0
+offset_top = 460.0
+offset_right = 750.0
+offset_bottom = 537.0
+texture_normal = ExtResource("5_88q2k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="2 jugadores" type="TextureButton" parent="."]
+visible = false
+offset_left = 429.0
+offset_top = 365.0
+offset_right = 750.0
+offset_bottom = 449.0
+texture_normal = ExtResource("6_eff21")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="creditos" type="TextureButton" parent="."]
+visible = false
+offset_left = 467.0
+offset_top = 541.0
+offset_right = 730.0
+offset_bottom = 610.0
+texture_normal = ExtResource("6_y270m")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 1042.0
+offset_top = 610.0
+offset_right = 1136.0
+offset_bottom = 636.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "V1.0 STABLE	"
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Sonido" to="." method="_on_sonido_pressed"]
+[connection signal="pressed" from="2 jugadores" to="." method="_on_2_jugadores_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]

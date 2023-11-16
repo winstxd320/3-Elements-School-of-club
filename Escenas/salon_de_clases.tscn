@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://beegd8vmc4ob1"]
+
+[ext_resource type="Texture2D" uid="uid://bssou7mhbxxga" path="res://Imagenes de elementos/Patio principal de dia.png" id="1_j57w7"]
+
+[node name="Patio principal de dia" type="Node2D"]
+
+[node name="Patio principal de dia" type="Sprite2D" parent="."]
+position = Vector2(577.5, 328)
+scale = Vector2(1.12793, 0.640625)
+texture = ExtResource("1_j57w7")

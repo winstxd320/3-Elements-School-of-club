@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://wibae0ylsd6v"]
+
+[ext_resource type="Texture2D" uid="uid://dtyp0l81yykjd" path="res://Personajes/Valentino.png" id="1_uexx7"]
+
+[node name="Samantha" type="Node2D"]
+
+[node name="Samantha" type="Sprite2D" parent="."]
+position = Vector2(22, 2.5)
+scale = Vector2(0.302734, 0.329102)
+texture = ExtResource("1_uexx7")

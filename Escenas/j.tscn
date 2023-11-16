@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnks3375an1jv"]
+
+[ext_resource type="Texture2D" uid="uid://cdax8eovuvyn3" path="res://Personajes/J.png" id="1_k30co"]
+
+[node name="J" type="Node2D"]
+
+[node name="J" type="Sprite2D" parent="."]
+position = Vector2(-10.5, -7.00001)
+scale = Vector2(0.30957, 0.324219)
+texture = ExtResource("1_k30co")

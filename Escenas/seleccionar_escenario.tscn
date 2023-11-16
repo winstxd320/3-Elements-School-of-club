@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=3 uid="uid://nl7x66mjpjun"]
+
+[ext_resource type="Script" path="res://Scripts/seleccionar_escenario.gd" id="1_sck25"]
+[ext_resource type="Texture2D" uid="uid://bssou7mhbxxga" path="res://Imagenes de elementos/Patio principal de dia.png" id="2_vvupc"]
+[ext_resource type="Texture2D" uid="uid://dxhkpkr5w177c" path="res://Imagenes de elementos/Patio tracero de tarde.png" id="3_hicjj"]
+[ext_resource type="Texture2D" uid="uid://dm5n4hxp3508" path="res://Imagenes de elementos/Salon de matematicas.png" id="4_br3kh"]
+
+[node name="Seleccionar Escenario" type="Node2D"]
+script = ExtResource("1_sck25")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 1145.0
+offset_bottom = 637.0
+color = Color(0.239216, 0.239216, 0.239216, 1)
+
+[node name="Patio principal de dia" type="TextureButton" parent="."]
+offset_left = 147.0
+offset_top = 196.0
+offset_right = 356.0
+offset_bottom = 341.0
+texture_normal = ExtResource("2_vvupc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Patrio tracero de tarde" type="TextureButton" parent="."]
+offset_left = 484.0
+offset_top = 196.0
+offset_right = 689.0
+offset_bottom = 341.0
+texture_normal = ExtResource("3_hicjj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Salon de matematicas" type="TextureButton" parent="."]
+offset_left = 802.0
+offset_top = 196.0
+offset_right = 1002.0
+offset_bottom = 341.0
+texture_normal = ExtResource("4_br3kh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Seleccione un escenario" type="Label" parent="."]
+offset_left = 330.0
+offset_top = 29.0
+offset_right = 838.0
+offset_bottom = 73.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 9
+theme_override_constants/line_spacing = 5
+theme_override_font_sizes/font_size = 28
+text = "Seleccione el escenario para competir"
+
+[node name="Patio principal" type="Label" parent="."]
+offset_left = 100.0
+offset_top = 369.0
+offset_right = 608.0
+offset_bottom = 413.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 9
+theme_override_constants/line_spacing = 5
+theme_override_font_sizes/font_size = 28
+text = "Patio principal de día	"
+
+[node name="Patio tracerro" type="Label" parent="."]
+offset_left = 444.0
+offset_top = 369.0
+offset_right = 952.0
+offset_bottom = 413.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 9
+theme_override_constants/line_spacing = 5
+theme_override_font_sizes/font_size = 28
+text = "Patio trasero de tarde"
+
+[node name="salon m" type="Label" parent="."]
+offset_left = 774.0
+offset_top = 369.0
+offset_right = 1282.0
+offset_bottom = 413.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 9
+theme_override_constants/line_spacing = 5
+theme_override_font_sizes/font_size = 28
+text = "Salón de matemáticas"
+
+[connection signal="pressed" from="Patio principal de dia" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="Patrio tracero de tarde" to="." method="_on_patrio_tracero_de_tarde_pressed"]
+[connection signal="pressed" from="Salon de matematicas" to="." method="_on_salon_de_matematicas_pressed"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dh0e45sse08k2"
+path="res://.godot/imported/sonido boton.wav-5cfc36fc6ad1a19328b666950b22be33.sample"
+
+[deps]
+
+source_file="res://Sonidos/sonido boton.wav"
+dest_files=["res://.godot/imported/sonido boton.wav-5cfc36fc6ad1a19328b666950b22be33.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

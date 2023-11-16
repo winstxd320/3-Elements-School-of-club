@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bia4uprh0bkwk"]
+
+[ext_resource type="Texture2D" uid="uid://c8mkkmx0mont7" path="res://Personajes/Phember.png" id="1_1pq8w"]
+
+[node name="Phember" type="Node2D"]
+position = Vector2(0, 29)
+
+[node name="Phember" type="Sprite2D" parent="."]
+position = Vector2(12, -2.8125)
+scale = Vector2(0.329346, 0.319946)
+texture = ExtResource("1_1pq8w")

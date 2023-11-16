@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwqbxt2xfmkdj"]
+
+[ext_resource type="Texture2D" uid="uid://cwmondd2ni6j4" path="res://Personajes/ELI (2).png" id="1_5fb58"]
+
+[node name="Eli" type="Node2D"]
+
+[node name="Eli" type="Sprite2D" parent="."]
+position = Vector2(1, 3.0001)
+scale = Vector2(0.358797, 0.384766)
+texture = ExtResource("1_5fb58")

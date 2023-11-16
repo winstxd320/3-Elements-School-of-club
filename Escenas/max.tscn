@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cclnr5foukn15"]
+
+[ext_resource type="Texture2D" uid="uid://cwoy4ea4vyswy" path="res://Personajes/Max.png" id="1_4obwk"]
+
+[node name="Max" type="Node2D"]
+
+[node name="Max" type="Sprite2D" parent="."]
+position = Vector2(10, 2)
+scale = Vector2(0.315582, 0.298828)
+texture = ExtResource("1_4obwk")
